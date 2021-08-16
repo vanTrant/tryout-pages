@@ -15,7 +15,7 @@ function showTryouts() {
                         <p class="date"><strong>Hari, Tanggal :</strong> ${date}</p>
                         <p class="time"><strong>Waktu :</strong> ${time}</p>
                     </div>
-                    <button class='mulai-btn'><a href='#' class='link'>Mulai Tryout</a></button>
+                    <button class='mulai-btn'><a href='../../tryout-start/simak-ui/index.html' class='link'>Mulai Tryout</a></button>
         `;
 
         container_div.appendChild(tryout);
