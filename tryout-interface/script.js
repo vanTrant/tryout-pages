@@ -7,6 +7,7 @@ const c = document.getElementById('c-text');
 const d = document.getElementById('d-text');
 let nomor;
 let currentQuiz = 0;
+let nomorSoal = [];
 let hasilJawaban = [];
 
 containerTitle.textContent = tryoutTitle;
@@ -15,11 +16,7 @@ shuffleArray(tryoutData);
 loadSoal();
 createDivs(tryoutData.length);
 
-if (document.getElementById('a').checked === true) {
-    console.log('jwb a');
-}
-
-// start pemilihan soal acak
+// fungsi untuk pemilihan soal acak
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -27,11 +24,11 @@ function shuffleArray(arr) {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+    return arr;
 }
 
+// fungsi untuk menampilkan soal pertama, selanjutnya dilanjut oleh fungsi changeSoal()
 function loadSoal() {
-    deselectAnswer();
-
     const currentQuizData = tryoutData[currentQuiz];
 
     soal.textContent = currentQuizData.soal;
@@ -45,23 +42,8 @@ function deselectAnswer() {
     jawaban.forEach((e) => (e.checked = false));
 }
 
-function getSelected() {
-    let userAnswer;
-
-    jawaban.forEach((e) => {
-        if (e.checked) {
-            userAnswer = jawaban.id;
-        }
-    });
-    return userAnswer;
-}
-// end pemilihan soal acak
-
 function changeSoal() {
     deselectAnswer();
-
-    let currentId = this.id;
-    const div = document.getElementById(currentId);
 
     nomor.forEach((e) => {
         if (e.classList.contains('active')) {
@@ -71,7 +53,8 @@ function changeSoal() {
 
     this.classList.add('active');
 
-    const currentQuizData = tryoutData[currentId];
+    const currentQuizData = tryoutData[this.id];
+    nomorSoal = [tryoutData[this.id].nomor];
 
     soal.textContent = currentQuizData.soal;
     a.textContent = currentQuizData.a;
@@ -92,8 +75,50 @@ function createDivs(number) {
         div.textContent = `${i + 1}`;
         div.addEventListener('click', () => div.classList.add('active'));
         div.addEventListener('click', changeSoal);
+        div.addEventListener('click', getNumber);
     }
     nomor = document.querySelectorAll('.nomor');
     nomor[0].classList.add('active');
 }
 // end pembuatan navigasi nomor
+
+function getNumber() {
+    const currentNum = document.querySelectorAll('.nomor');
+    currentNum.forEach((num) => {
+        if (num.classList.contains('active')) {
+            number = tryoutData[num.id].nomor;
+        }
+    });
+    return number;
+}
+
+function getAnswer() {
+    let userAnswer;
+
+    document.querySelectorAll('.jawaban').forEach((e) => {
+        if (e.checked === true) {
+            userAnswer = e.id;
+        }
+    });
+    return userAnswer;
+}
+
+getAnswer();
+
+function saveAnswer() {
+    navNum = document.querySelectorAll('.nomor');
+    console.log(nomor.innerHTML);
+
+    for (let i = 0; i < tryoutData.length; i++) {
+        if (navNum[i].classList.contains('active')) {
+            console.log('sama');
+            hasilJawaban[i] = {
+                nomor: getNumber(),
+                jawab: getAnswer(),
+            };
+            continue;
+        }
+    }
+
+    console.log(hasilJawaban);
+}
