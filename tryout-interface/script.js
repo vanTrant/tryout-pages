@@ -16,6 +16,11 @@ shuffleArray(tryoutData);
 loadSoal();
 createDivs(tryoutData.length);
 
+jawaban.forEach((opsi) => {
+    opsi.addEventListener('click', saveAnswer);
+    console.log(saveAnswer());
+});
+
 // fungsi untuk pemilihan soal acak
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -102,8 +107,6 @@ function getAnswer() {
     });
     return userAnswer;
 }
-
-getAnswer();
 
 function saveAnswer() {
     navNum = document.querySelectorAll('.nomor');
