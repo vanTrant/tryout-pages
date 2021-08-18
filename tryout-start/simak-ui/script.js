@@ -22,7 +22,7 @@ function showTps() {
                 <p class="waktu-text"><span class="tps-waktu">${getWaktu}</span> Menit</p>
             </div>
             <button class="mulai-btn">
-                <a href="#" class="link">Mulai</a>
+                <a href="../../tryout-interface/index.html" class="link">Mulai</a>
             </button>
         `;
         tpsContainer.appendChild(div);
@@ -44,7 +44,7 @@ function showTka() {
                 <p class="waktu-text"><span class="tka-waktu">${getWaktu}</span> Menit</p>
             </div>
             <button class="mulai-btn">
-                <a href="#" class="link">Mulai</a>
+                <a href="../../tryout-interface/index.html" class="link">Mulai</a>
             </button>
         `;
         tkaContainer.appendChild(div);
