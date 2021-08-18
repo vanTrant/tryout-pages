@@ -176,18 +176,14 @@ function showPopup() {
 
 // fungsi untuk menampilkan kembali jawaban user yg sebelumnya sudah dipilih
 function loadAnswer() {
-    for (let i = 0; i < nomor.length; i++) {
-        if (nomor[i].classList.contains('active') === true) {
-            for (let j = 0; j < hasilJawaban.length; j++) {
-                if (hasilJawaban[j] !== undefined) {
-                    for (let k = 0; k < jawaban.length; k++) {
-                        if (hasilJawaban[j].jawab == jawaban[k].id && hasilJawaban[j].nomor == getNumber()) {
-                            return (jawaban[k].checked = true);
-                        } else {
-                            jawaban[k].checked = false;
-                            continue;
-                        }
-                    }
+    for (let j = 0; j < hasilJawaban.length; j++) {
+        if (hasilJawaban[j] !== undefined) {
+            for (let k = 0; k < jawaban.length; k++) {
+                if (hasilJawaban[j].jawab == jawaban[k].id && hasilJawaban[j].nomor == getNumber()) {
+                    return (jawaban[k].checked = true);
+                } else {
+                    jawaban[k].checked = false;
+                    continue;
                 }
             }
         }
