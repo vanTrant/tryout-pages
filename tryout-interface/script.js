@@ -20,7 +20,6 @@ createDivs(tryoutData.length);
 
 jawaban.forEach((opsi) => {
     opsi.addEventListener('click', saveAnswer);
-    console.log(saveAnswer());
 });
 
 submitBtn.addEventListener('mousedown', () => submitBtn.classList.add('mousedown'));
@@ -72,6 +71,8 @@ function changeSoal() {
     b.textContent = currentQuizData.b;
     c.textContent = currentQuizData.c;
     d.textContent = currentQuizData.d;
+
+    loadAnswer();
 }
 
 // pembuatan navigasi nomor
@@ -91,7 +92,6 @@ function createDivs(number) {
     nomor = document.querySelectorAll('.nomor');
     nomor[0].classList.add('active');
 }
-// end pembuatan navigasi nomor
 
 function getNumber() {
     const currentNum = document.querySelectorAll('.nomor');
@@ -143,6 +143,8 @@ function saveAnswer() {
             continue;
         }
     }
+
+    return hasilJawaban;
 }
 
 function showPopup() {
@@ -169,5 +171,25 @@ function showPopup() {
     confirmBtn.textContent = 'SELESAI';
 
     cancelBtn.addEventListener('click', () => body.removeChild(popContainer));
-    // todo: tambah event listener buat confirmBtn
+    confirmBtn.addEventListener('click', () => (window.location = '../tryout-start/sbmptn/index.html'));
+}
+
+// fungsi untuk menampilkan kembali jawaban user yg sebelumnya sudah dipilih
+function loadAnswer() {
+    for (let i = 0; i < nomor.length; i++) {
+        if (nomor[i].classList.contains('active') === true) {
+            for (let j = 0; j < hasilJawaban.length; j++) {
+                if (hasilJawaban[j] !== undefined) {
+                    for (let k = 0; k < jawaban.length; k++) {
+                        if (hasilJawaban[j].jawab == jawaban[k].id && hasilJawaban[j].nomor == getNumber()) {
+                            return (jawaban[k].checked = true);
+                        } else {
+                            jawaban[k].checked = false;
+                            continue;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
