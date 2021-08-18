@@ -72,5 +72,5 @@ function showPopup() {
     div.appendChild(h2);
     div.appendChild(closeBtn);
 
-    closeBtn.addEventListener('click', () => (window.location = '../../index.html'));
+    closeBtn.addEventListener('click', () => (window.location = '../tryout-start/sbmptn/index.html'));
 }
