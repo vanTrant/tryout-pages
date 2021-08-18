@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.section-one::before {
+    content: '';
+    width: 100vw;
+    height: 12vh;
+    display: block;
+}
+
+section {
+    height: auto;
+    width: 100vw;
+    background: #ffd464;
+}
+
+#tryout-title {
+    text-align: center;
+    padding: 1rem;
+}
+
+.nilai-container {
+    height: 30vh;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.nilai-circle {
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    background: #f4643f;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: -25px;
+}
+
+.logo-upgredu {
+    max-height: 30vh;
+    position: relative;
+    left: -15px;
+    transform: rotateZ(10deg);
+}
+
+.nilai-box {
+    display: flex;
+    justify-content: center;
+}
+
+.nilai {
+    display: flex;
+    flex-direction: column;
+}
+
+.nilai p {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-nilai {
+    width: 25%;
+    text-align: right;
+}
+
+.nilai-tps,
+.nilai-tka {
+    width: 35%;
+    margin: 1rem 2rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    border: 5px solid rgba(30, 30, 30, 0.6);
+}
+
+.nilai {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    margin: auto 5rem;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.profile-btn {
+    padding: 0.5rem;
+    background: rgb(250, 250, 250);
+    color: #222222;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    width: 7rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+.profile-btn::before {
+    content: 'PROFIL';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: rgb(32, 110, 173);
+    transition: 300ms ease;
+    color: rgb(231, 231, 231);
+}
+
+.profile-btn:hover::before {
+    left: -0%;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .section-one::before {
+        display: none;
+    }
+
+    .nilai-tps,
+    .nilai-tka {
+        width: 40%;
+        margin: auto 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nilai-box {
+        flex-direction: column-reverse;
+    }
+
+    .nilai-tps,
+    .nilai-tka {
+        width: 95%;
+        margin: 1rem auto;
+    }
+    .quote {
+        margin: auto 1rem;
+        margin-top: 0;
+    }
+}
