@@ -275,6 +275,7 @@
     .tryout-container {
         display: flex;
         flex-direction: column;
+        margin: auto 0.2rem;
     }
 
     .tryout-info {
@@ -292,10 +293,6 @@
 }
 
 @media only screen and (max-width: 320px) {
-    .tryout-container {
-        margin: auto 0.2rem;
-    }
-
     .soal-container {
         margin: 0;
     }
