@@ -1,6 +1,8 @@
+const body = document.querySelector('body');
 const containerTitle = document.querySelector('.title');
 const soal = document.querySelector('.soal-text');
 const jawaban = document.querySelectorAll('.jawaban');
+const submitBtn = document.querySelector('.submit-btn');
 const a = document.getElementById('a-text');
 const b = document.getElementById('b-text');
 const c = document.getElementById('c-text');
@@ -20,6 +22,10 @@ jawaban.forEach((opsi) => {
     opsi.addEventListener('click', saveAnswer);
     console.log(saveAnswer());
 });
+
+submitBtn.addEventListener('mousedown', () => submitBtn.classList.add('mousedown'));
+submitBtn.addEventListener('mouseup', () => submitBtn.classList.remove('mousedown'));
+submitBtn.addEventListener('mouseup', showPopup);
 
 // fungsi untuk pemilihan soal acak
 function shuffleArray(arr) {
@@ -108,20 +114,60 @@ function getAnswer() {
     return userAnswer;
 }
 
+function getTotalAnswered() {
+    let totalAnswered = 0;
+
+    for (let i = 0; i < tryoutData.length; i++) {
+        if (hasilJawaban[i] !== undefined) {
+            if (hasilJawaban[i].jawab !== undefined) {
+                totalAnswered++;
+            }
+        }
+    }
+
+    return totalAnswered;
+}
+
 function saveAnswer() {
     navNum = document.querySelectorAll('.nomor');
-    console.log(nomor.innerHTML);
 
     for (let i = 0; i < tryoutData.length; i++) {
         if (navNum[i].classList.contains('active')) {
-            console.log('sama');
             hasilJawaban[i] = {
                 nomor: getNumber(),
                 jawab: getAnswer(),
             };
+            if (hasilJawaban[i].jawab !== undefined) {
+                navNum[i].classList.add('answered');
+            }
             continue;
         }
     }
+}
 
-    console.log(hasilJawaban);
+function showPopup() {
+    const popContainer = document.createElement('section');
+    const popContent = document.createElement('div');
+    const textContainer = document.createElement('div');
+    const popHeader = document.createElement('h4');
+    const popText = document.createElement('p');
+
+    body.appendChild(popContainer).classList.add('confirmation-bg');
+    popContainer.appendChild(popContent).classList.add('confirmation-content');
+    popContent.appendChild(textContainer).classList.add('text-container');
+    textContainer.appendChild(popHeader).textContent = 'Apakah kamu yakin?';
+    textContainer.appendChild(popText).textContent = `Kamu menjawab ${getTotalAnswered()} dari ${tryoutData.length} soal.`;
+    popContent.appendChild(document.createElement('div')).classList.add('btn-container');
+
+    const btnContainer = document.querySelector('.btn-container');
+    btnContainer.appendChild(document.createElement('button')).classList.add('cancel-btn');
+    btnContainer.appendChild(document.createElement('button')).classList.add('confirm-btn');
+
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const confirmBtn = document.querySelector('.confirm-btn');
+    cancelBtn.textContent = 'BATAL';
+    confirmBtn.textContent = 'SELESAI';
+
+    cancelBtn.addEventListener('click', () => body.removeChild(popContainer));
+    // todo: tambah event listener buat confirmBtn
 }

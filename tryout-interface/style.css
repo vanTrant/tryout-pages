@@ -106,68 +106,201 @@
     color: #eeeeee;
 }
 
+.nomor.answered {
+    background: rgb(20, 200, 20);
+}
+
 .submit-btn {
     padding: 0.5rem;
-    background: rgb(13, 138, 221);
-    color: #ffffff;
+    background: rgb(231, 231, 231);
+    color: #222222;
     border: none;
     border-radius: 20px;
     height: 50px;
     width: 100%;
     cursor: pointer;
+    letter-spacing: 1px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 }
 
+.submit-btn.mousedown {
+    transform: scale(0.95);
+}
+
 .submit-btn::before {
-    content: '';
-    display: block;
+    content: 'SELESAI';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
     top: 0;
     left: -100%;
-    transform: skew(20deg);
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.164);
+    background: rgb(32, 110, 173);
     transition: 300ms ease;
+    color: rgb(231, 231, 231);
 }
 
 .submit-btn:hover::before {
-    left: 100%;
+    left: -0%;
+}
+
+.confirmation-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+}
+
+.confirmation-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    width: 40%;
+    height: 40%;
+    background: rgba(240, 240, 240);
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.text-container h4 {
+    padding: 0.4rem;
+}
+
+.btn-container {
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+}
+
+.confirm-btn,
+.cancel-btn {
+    height: 3rem;
+    width: 50%;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.confirm-btn {
+    background: rgb(32, 110, 173);
+}
+
+.cancel-btn {
+    background: rgb(185, 44, 19);
 }
 
 @media only screen and (max-width: 768px) {
-    .content-container {
-        display: flex;
-        flex-direction: column;
+    .section-one {
+        height: max-content;
+    }
+
+    .tryout-container {
+        margin: auto 1rem;
+    }
+
+    .soal-container {
+        margin: auto 1rem;
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .jawaban-container input {
+        margin-top: 0.5ch;
+    }
+
+    .tryout-info {
+        font-size: 0.8rem;
+    }
+
+    .countdown {
+        padding: 0.5rem;
+    }
+
+    .nomor-div {
+        display: grid;
+        width: max-content;
+        height: max-content;
+    }
+
+    .nomor {
+        border-radius: 0;
+        border: 1px solid rgba(100, 100, 100, 0.3);
+        margin: 0;
+    }
+
+    .confirmation-content {
+        width: 60%;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    :root {
-        font-size: 18px;
+    .tryout-header {
+        text-align: center;
+        height: max-content;
+        width: max-content;
+        padding: 0;
+        margin: auto;
+        margin-bottom: 1rem;
+        font-size: 1rem;
     }
 
-    .tryout-header {
+    .tryout-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+    }
+
+    .tryout-info {
+        margin: 1rem 1rem;
+    }
+
+    .confirmation-content {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .text-container {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .tryout-container {
+        margin: auto 0.2rem;
+    }
+
+    .soal-container {
         margin: 0;
-        padding: 0;
     }
 
-    .countdown {
-        margin: 1.5rem auto;
-    }
-
-    .container {
-        margin: 1rem 0.4rem;
-    }
-
-    .container-title {
-        margin: 0;
-        text-align: center;
+    .tryout-info {
+        margin: 1rem 0;
     }
 }
