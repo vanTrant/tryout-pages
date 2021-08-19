@@ -22,7 +22,7 @@ function showTps() {
                 <p class="waktu-text"><span class="tps-waktu">${getWaktu}</span> Menit</p>
             </div>
             <button class="mulai-btn">
-                <a href="../../tryout-interface/index.html" class="link">Mulai</a>
+                <a href="../../tryout-interface/index.html" class="link">Kerjakan</a>
             </button>
         `;
         tpsContainer.appendChild(div);

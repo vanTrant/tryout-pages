@@ -44,7 +44,7 @@ function showTka() {
                 <p class="waktu-text"><span class="tka-waktu">${getWaktu}</span> Menit</p>
             </div>
             <button class="mulai-btn">
-                <a href="../../tryout-interface/index.html" class="link">Mulai</a>
+                <a href="../../tryout-interface/index.html" class="link">Kerjakan</a>
             </button>
         `;
         tkaContainer.appendChild(div);
