@@ -21,9 +21,7 @@ function showTps() {
                 <p class="soal-text"><span class="tps-soal">${getSoal}</span> Soal</p>
                 <p class="waktu-text"><span class="tps-waktu">${getWaktu}</span> Menit</p>
             </div>
-            <button class="mulai-btn">
-                <a href="../../tryout-interface/index.html" class="link">Kerjakan</a>
-            </button>
+            <a href="../../tryout-interface/index.html" class="link">Kerjakan</a>
         `;
         tpsContainer.appendChild(div);
     }
@@ -43,9 +41,7 @@ function showTka() {
                 <p class="soal-text"><span class="tka-soal">${getSoal}</span> Soal</p>
                 <p class="waktu-text"><span class="tka-waktu">${getWaktu}</span> Menit</p>
             </div>
-            <button class="mulai-btn">
-                <a href="../../tryout-interface/index.html" class="link">Mulai</a>
-            </button>
+            <a href="../../tryout-interface/index.html" class="link">Kerjakan</a>
         `;
         tkaContainer.appendChild(div);
     }

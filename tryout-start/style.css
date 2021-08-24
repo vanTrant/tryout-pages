@@ -85,20 +85,27 @@
     text-indent: 1rem;
 }
 
-.mulai-btn {
+.link {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
     padding: 0.5rem;
     background: rgb(13, 138, 221);
     border: none;
     border-radius: 20px;
-    height: 40px;
+    height: 50px;
     width: 120px;
     cursor: pointer;
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    color: rgba(245, 245, 245, 1);
+    font-size: 0.9rem;
+    text-align: center;
 }
 
-.mulai-btn::before {
+.link::before {
     content: '';
     display: block;
     position: absolute;
@@ -111,15 +118,8 @@
     transition: 300ms ease;
 }
 
-.mulai-btn:hover::before {
+.link:hover::before {
     left: 100%;
-}
-
-.link {
-    text-decoration: none;
-    color: rgba(245, 245, 245, 1);
-    font-size: 0.7rem;
-    padding: 10px;
 }
 
 .submit-btn-container {
@@ -132,12 +132,13 @@
 
 .submit-btn {
     height: 2.5rem;
-    width: 8rem;
-    background: #ebebeb;
+    width: 12rem;
+    background: #263d00;
     border-radius: 20px;
     border: none;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    color: rgb(255, 255, 255);
 }
 
 .submit-btn a {

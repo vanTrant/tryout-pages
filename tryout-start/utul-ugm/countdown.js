@@ -1,7 +1,7 @@
 setInterval(countDown, 1000);
 
 function countDown() {
-    const countDate = new Date('21 August, 2021 11:22:00').getTime();
+    const countDate = new Date('30 August, 2021 11:22:00').getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
     const second = 1000;

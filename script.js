@@ -56,13 +56,10 @@ function showContent() {
         title[i].innerHTML = '';
         title[i].innerHTML = tryoutChoice[i].title;
 
-        btn.classList.add('tryout-btn');
-        btnContainer[i].appendChild(btn);
-
         anchor.classList.add('links');
         anchor.innerHTML = 'Lihat Tryout';
         anchor.setAttribute('href', `${tryoutChoice[i].url}`);
-        btn.appendChild(anchor);
+        btnContainer[i].appendChild(anchor);
     }
     animatedBgs.forEach((bg) => {
         bg.classList.remove('animated-bg');

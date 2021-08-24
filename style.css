@@ -77,23 +77,23 @@
     justify-content: center;
 }
 
-.tryout-btn {
+.links {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: inherit;
     padding: 10px;
     background: #ffffff;
     border: 2px solid rgba(0, 0, 0, 0.7);
     transition: 200ms ease;
     border-radius: 10px;
-    cursor: pointer;
+    font-size: 0.7rem;
 }
 
-.tryout-btn:hover {
+.links:hover {
     transform: translate(2px, -2px);
     box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.8);
-}
-
-.links {
-    text-decoration: none;
-    color: inherit;
 }
 
 .animated-bg {

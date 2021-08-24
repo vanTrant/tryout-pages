@@ -15,7 +15,7 @@ function showTryouts() {
                         <p class="date"><strong>Hari, Tanggal :</strong> ${date}</p>
                         <p class="time"><strong>Waktu :</strong> ${time}</p>
                     </div>
-                    <button class='mulai-btn'><a href='../../tryout-start/utul-ugm/index.html' class='link'>Mulai Tryout</a></button>
+                    <a href='../../tryout-start/utul-ugm/index.html' class='link'>KERJAKAN</a>
         `;
 
         container_div.appendChild(tryout);
