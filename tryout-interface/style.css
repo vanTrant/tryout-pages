@@ -56,11 +56,17 @@
 
 .jawaban-container input {
     margin-top: 1ch;
+    cursor: pointer;
 }
 
 .jawaban-container input,
 .jawaban-container p {
     display: block;
+}
+
+.jawaban-label {
+    width: 100%;
+    cursor: pointer;
 }
 
 .countdown {
