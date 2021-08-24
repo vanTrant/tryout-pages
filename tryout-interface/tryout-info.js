@@ -1,7 +1,8 @@
 const tryoutTitle = 'Tryout 1';
 const tryoutData = [
     {
-        nomor: '1', // Ini buat data aja, buat tampilannya tetep diacak
+        nomor: '1',
+        imgUrl: 'https://i.ytimg.com/vi/iWX_nJfwc94/maxresdefault.jpg',
         soal: 'Ini soal 1',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -11,6 +12,7 @@ const tryoutData = [
     },
     {
         nomor: '2',
+        imgUrl: '#',
         soal: 'Ini soal 2',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -20,6 +22,7 @@ const tryoutData = [
     },
     {
         nomor: '3',
+        imgUrl: '#',
         soal: 'Ini soal 3',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -29,6 +32,7 @@ const tryoutData = [
     },
     {
         nomor: '4',
+        imgUrl: '#',
         soal: 'Ini soal 4',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -38,6 +42,7 @@ const tryoutData = [
     },
     {
         nomor: '5',
+        imgUrl: '#',
         soal: 'Ini soal 5',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -47,6 +52,7 @@ const tryoutData = [
     },
     {
         nomor: '6',
+        imgUrl: '#',
         soal: 'Ini soal 6',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -56,6 +62,7 @@ const tryoutData = [
     },
     {
         nomor: '7',
+        imgUrl: '#',
         soal: 'Ini soal 7',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -65,6 +72,7 @@ const tryoutData = [
     },
     {
         nomor: '8',
+        imgUrl: 'https://www.mdpi.com/applsci/applsci-10-02085/article_deploy/html/images/applsci-10-02085-g001.png',
         soal: 'Ini soal 8',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -74,6 +82,7 @@ const tryoutData = [
     },
     {
         nomor: '9',
+        imgUrl: '#',
         soal: 'Ini soal 9',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',
@@ -83,6 +92,7 @@ const tryoutData = [
     },
     {
         nomor: '10',
+        imgUrl: 'https://image2.slideserve.com/5364043/unsteady-heat-transfer-in-semi-infinite-solids-n.jpg#',
         soal: 'Ini soal 10',
         a: 'Ini jawaban a',
         b: 'Ini jawaban b',

@@ -1,5 +1,7 @@
 const body = document.querySelector('body');
 const containerTitle = document.querySelector('.title');
+const imgContainer = document.querySelector('.img-container');
+const soalImg = document.querySelector('.soal-img');
 const soal = document.querySelector('.soal-text');
 const jawaban = document.querySelectorAll('.jawaban');
 const submitBtn = document.querySelector('.submit-btn');
@@ -46,6 +48,10 @@ function loadSoal() {
     b.textContent = currentQuizData.b;
     c.textContent = currentQuizData.c;
     d.textContent = currentQuizData.d;
+    if (currentQuizData.imgUrl !== '#') {
+        imgContainer.style.display = 'block';
+        soalImg.setAttribute('src', currentQuizData.imgUrl);
+    } else imgContainer.style.display = 'none';
 }
 
 function deselectAnswer() {
@@ -71,6 +77,11 @@ function changeSoal() {
     b.textContent = currentQuizData.b;
     c.textContent = currentQuizData.c;
     d.textContent = currentQuizData.d;
+
+    if (currentQuizData.imgUrl !== '#') {
+        imgContainer.style.display = 'block';
+        soalImg.setAttribute('src', currentQuizData.imgUrl);
+    } else imgContainer.style.display = 'none';
 
     loadAnswer();
 }
