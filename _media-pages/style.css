@@ -124,15 +124,12 @@ body {
         height: 0;
     }
 
-    .tryout-header {
+    .media-header {
         padding: 0.5rem;
         width: 100%;
         font-size: 1rem;
         border-radius: 0;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
-    }
-
-    .tryout-header h1 {
         text-align: center;
     }
 

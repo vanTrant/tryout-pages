@@ -92,10 +92,6 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-    .section-one::before {
-        height: 0;
-    }
-
     .article-container {
         margin: auto 10vw;
     }
