@@ -11,7 +11,7 @@ function renderPost() {
                 <img class="article-img" src=${postData[i].imgSrc} alt="" />
                 <article class="article-content">
                     <h2>${postData[i].title}</h2>
-                    <p>${postData[i].content}<a class="link" href="#"> Read&nbsp;more</a></p>
+                    <p>${postData[i].content}<a class="link" href="../media-content/index.html"> Read&nbsp;more</a></p>
                     <p>
                         <small>
                             ${postData[i].author} -
