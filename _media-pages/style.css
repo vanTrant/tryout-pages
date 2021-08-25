@@ -75,10 +75,6 @@ body {
 .article-list {
     max-height: 20rem;
     margin: 2rem auto;
-    /* padding: 1rem;
-    background: #f4643f;
-    border-radius: 0.5rem;
-    color: #ffffff; */
 }
 
 .article {
@@ -101,6 +97,7 @@ body {
 
 .article-content p {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5rem;
 }
 
 .link {
