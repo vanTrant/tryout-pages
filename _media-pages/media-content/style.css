@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+body {
+    background: #ffffff;
+}
+
+.section-one::before {
+    content: '';
+    width: 100vw;
+    height: 12vh;
+    display: block;
+}
+
+.section-one {
+    height: max-content;
+    width: 100vw;
+}
+
+.article-container {
+    margin: auto 15vw;
+}
+
+.article-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+}
+
+.img-content {
+    width: 100%;
+    height: 100%;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.article-content {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5rem;
+    text-indent: 3rem;
+    text-align: justify;
+}
+
+.article-author {
+    padding: 1rem;
+}
+
+.previous {
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.previous-btn {
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .section-one::before {
+        height: 5vh;
+    }
+
+    .article-content {
+        font-size: 0.8rem;
+    }
+
+    .article-author {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section-one::before {
+        height: 0;
+    }
+
+    .article-container {
+        margin: auto 10vw;
+    }
+
+    .article-title {
+        font-size: 1rem;
+    }
+
+    .article-content {
+        font-size: 0.7rem;
+        text-indent: 1rem;
+    }
+
+    .article-author {
+        font-size: 0.65rem;
+    }
+}
