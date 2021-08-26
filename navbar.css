@@ -82,6 +82,12 @@ nav.visible {
     display: none;
 }
 
+@media only screen and (max-width: 1920px) {
+    .list li a {
+        font-size: 1.3rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     nav {
         transform: translateX(-100%);

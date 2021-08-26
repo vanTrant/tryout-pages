@@ -145,6 +145,13 @@
     color: #222222;
 }
 
+@media only screen and (min-width: 1920px) {
+    .content-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .content-container {
         display: flex;

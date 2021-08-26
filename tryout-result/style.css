@@ -151,6 +151,18 @@ section {
     font-size: 0.7rem;
 }
 
+@media only screen and (min-width: 1920px) {
+    #tryout-title {
+        text-align: center;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .nilai-circle {
+        font-size: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .section-one::before {
         display: none;

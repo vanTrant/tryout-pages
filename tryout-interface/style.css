@@ -241,6 +241,59 @@
     background: rgb(185, 44, 19);
 }
 
+@media only screen and (max-width: 1920px) {
+    .soal-container {
+        font-size: 1.3rem;
+    }
+
+    .jawaban-container input {
+        margin-top: 2ch;
+    }
+
+    .countdown {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .nomor-container {
+        height: max-content;
+        border-radius: 30px;
+        font-size: 1.1rem;
+    }
+
+    .nomor-container h4 {
+        font-size: 1.3rem;
+    }
+
+    .nomor-div {
+        width: calc((2rem * 5) + 2rem);
+    }
+
+    .nomor {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        height: 70px;
+        border-radius: 1.5rem;
+    }
+
+    .text-container {
+        font-size: 1.4rem;
+    }
+
+    .confirm-btn,
+    .cancel-btn {
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .section-one {
         height: max-content;
