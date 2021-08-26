@@ -47,6 +47,7 @@ section {
     justify-content: center;
     position: relative;
     right: -25px;
+    font-weight: bold;
 }
 
 .logo-upgredu {
@@ -176,6 +177,19 @@ section {
 }
 
 @media only screen and (max-width: 480px) {
+    .nilai-circle {
+        width: 20vh;
+        height: 20vh;
+        font-size: 0.9rem;
+    }
+
+    .logo-upgredu {
+        max-height: 30vh;
+        position: relative;
+        left: -15px;
+        transform: rotateZ(10deg);
+    }
+
     .nilai-box {
         flex-direction: column-reverse;
     }

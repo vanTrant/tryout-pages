@@ -241,7 +241,7 @@
     background: rgb(185, 44, 19);
 }
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1920px) {
     .soal-container {
         font-size: 1.3rem;
     }
@@ -319,6 +319,11 @@
 
     .countdown {
         padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .nomor-container {
+        border-radius: 0.5rem;
     }
 
     .nomor-div {
@@ -362,6 +367,7 @@
     .confirmation-content {
         width: 90%;
         font-size: 0.8rem;
+        text-align: center;
     }
 
     .text-container {
