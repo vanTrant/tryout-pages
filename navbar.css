@@ -67,6 +67,7 @@ nav.visible {
     text-decoration: none;
     color: #121212;
     transition: 300ms ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 .list li a:hover {
