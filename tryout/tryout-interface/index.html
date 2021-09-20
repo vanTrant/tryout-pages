@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../navbar.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./popup.css" />
+        <script src="../navbar.js" defer></script>
+        <script src="./tryout-info.js" defer></script>
+        <script src="./script.js" defer></script>
+        <script src="./countdown.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+        <link rel="icon" href="../assets/favicon.png" type="image/png" />
+        <title>Tryout</title>
+    </head>
+    <body>
+        <nav>
+            <button class="nav-btn open-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav nav-red">
+                <div class="nav nav-yellow">
+                    <div class="nav nav-white">
+                        <button class="nav-btn close-btn"><i class="fas fa-times"></i></button>
+                        <a href="../index.html"><img src="../assets/logo-letter.png" alt="Upgredu" class="logo" /></a>
+                        <ul class="list">
+                            <li><a href="../index.html" class="active">Tryout</a></li>
+                            <li><a href="#">Belajar</a></li>
+                            <li><a href="../../media/informasi-ptn/index.html">Media</a></li>
+                            <li><a href="#">Tentang</a></li>
+                            <div class="user-profile"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="section-one">
+            <div class="tryout-header">
+                <h1 class="title"></h1>
+            </div>
+            <div class="tryout-container">
+                <div class="soal-container">
+                    <div class="img-container">
+                        <img class="soal-img" src="" alt="" />
+                    </div>
+                    <h4 class="soal">
+                        <!-- <span class="nomor-soal">1</span><span>.&nbsp;</span> -->
+                        <span class="soal-text">Ini soal.</span>
+                    </h4>
+                    <form action="#">
+                        <div class="jawaban-container">
+                            <input type="radio" name="jawaban" id="a" class="jawaban" value="a" /><span>&nbsp;A.&nbsp;</span>
+                            <label for="a" id="a-text" class="jawaban-label">Ini jawaban</label>
+                        </div>
+                        <div class="jawaban-container">
+                            <input type="radio" name="jawaban" id="b" class="jawaban" value="b" /><span>&nbsp;B.&nbsp;</span>
+                            <label for="b" id="b-text" class="jawaban-label">Ini jawaban</label>
+                        </div>
+                        <div class="jawaban-container">
+                            <input type="radio" name="jawaban" id="c" class="jawaban" value="c" /><span>&nbsp;C.&nbsp;</span>
+                            <label for="c" id="c-text" class="jawaban-label">Ini jawaban</label>
+                        </div>
+                        <div class="jawaban-container">
+                            <input type="radio" name="jawaban" id="d" class="jawaban" value="d" /><span>&nbsp;D.&nbsp;</span>
+                            <label for="d" id="d-text" class="jawaban-label">Ini jawaban</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="tryout-info">
+                    <div class="countdown">
+                        <h4>Sisa Waktu</h4>
+                        <p>
+                            <span class="hour"></span> : <span class="minute"></span> :
+                            <span class="second"></span>
+                        </p>
+                    </div>
+                    <div class="nomor-container">
+                        <h4>Nomor soal</h4>
+                        <div class="nomor-div"></div>
+                    </div>
+                    <div>
+                        <button type="submit" class="submit-btn">SELESAI</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
